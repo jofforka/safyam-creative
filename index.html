@@ -46,7 +46,7 @@
     </button>
 
     <a class="brand" href="#home" aria-label="Safyam Creative Emporium home">
-      <span class="brand-seal" aria-hidden="true">S</span>
+      <img class="brand-logo" src="assets/images/safyam-logo.jpeg" alt="Safyam Creative Emporium logo" />
       <span class="brand-wordmark"><b>SAFYAM</b><small>CREATIVE EMPORIUM</small></span>
     </a>
 
@@ -124,15 +124,15 @@
         <div class="hero-beads">
           <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
         </div>
-        <div class="hero-monogram">S</div>
+        <div class="hero-logo-card"><img src="assets/images/safyam-logo.jpeg" alt="" /></div>
         <span class="hero-caption caption-one">HANDCRAFTED</span>
         <span class="hero-caption caption-two">LAGOS • NIGERIA</span>
       </div>
 
       <div class="hero-copy">
         <p class="eyebrow">Safyam Creative Emporium</p>
-        <h1>Where craft<br /><em>becomes</em> presence.</h1>
-        <p class="hero-lead">Distinctive fashion, handcrafted beadwork, accessories and gifts designed for people who refuse to blend in.</p>
+        <h1 id="heroTitle">Crafted to be<br /><em>remembered.</em></h1>
+        <p class="hero-lead" id="heroText">Premium fashion, handcrafted beadwork, accessories and gifts designed for people who refuse to blend in.</p>
         <div class="hero-cta">
           <a class="btn btn-gold" href="#shop">Shop the collection <span>↗</span></a>
           <a class="text-cta" href="#lookbook">Explore the lookbook <span>→</span></a>
@@ -175,7 +175,7 @@
           <p class="eyebrow dark">The Shop</p>
           <h2>Find your statement.</h2>
         </div>
-        <p class="shop-note">A premium demo catalogue ready to be replaced with Safyam’s original product photography and exact inventory.</p>
+        <p class="shop-note">Live catalogue architecture. Every product, image, price, stock level and product status can be managed from the Safyam Admin dashboard.</p>
       </div>
 
       <div class="shop-controls reveal">
@@ -232,7 +232,7 @@
           <p>From ready-to-shop collections to bespoke requests, Safyam combines modern style with the unmistakable character of hand-led creativity.</p>
         </div>
       </div>
-      <div class="story-seal reveal"><span>S</span><small>CREATIVE<br />EMPORIUM</small></div>
+      <div class="story-seal reveal story-logo"><img src="assets/images/safyam-logo.jpeg" alt="Safyam Creative Emporium" /></div>
     </section>
 
     <section class="services">
@@ -303,11 +303,11 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-brand"><span class="footer-s">S</span><div><b>SAFYAM</b><small>CREATIVE EMPORIUM</small></div></div>
+    <div class="footer-brand"><img class="footer-logo" src="assets/images/safyam-logo.jpeg" alt="Safyam Creative Emporium" /><div><b>SAFYAM</b><small>CREATIVE EMPORIUM</small></div></div>
     <div class="footer-grid">
       <div><span>SHOP</span><a href="#shop" data-shop-filter="beads">Beadwork</a><a href="#shop" data-shop-filter="fashion">Fashion</a><a href="#shop" data-shop-filter="accessories">Accessories</a><a href="#shop" data-shop-filter="gifts">Gifts</a></div>
       <div><span>EXPLORE</span><a href="#story">Our Story</a><a href="#lookbook">Lookbook</a><a href="#training">Training</a><a href="#contact">Contact</a></div>
-      <div><span>FOLLOW</span><a href="https://www.instagram.com/safyam_creative/" target="_blank" rel="noreferrer">Instagram ↗</a></div>
+      <div><span>FOLLOW</span><a href="https://www.instagram.com/safyam_creative/" target="_blank" rel="noreferrer">Instagram ↗</a><a href="admin.html">Admin ↗</a></div>
     </div>
     <div class="footer-bottom"><span>© <b id="year"></b> Safyam Creative Emporium</span><span>Fashion • Beadwork • Accessories • Gifts</span><a href="#home">Back to top ↑</a></div>
   </footer>
@@ -337,6 +337,8 @@
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

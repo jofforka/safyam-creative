@@ -1,47 +1,69 @@
-# Safyam Creative Emporium — Premium Website Build
+# Safyam Creative Emporium — Premium Storefront + Admin Backend
 
-A premium, mobile-first fashion and creative e-commerce front-end built with semantic HTML, CSS and vanilla JavaScript. It is designed for GitHub Pages and can later be connected to a real commerce backend.
+This build is designed for **GitHub Pages + Supabase**. GitHub serves the premium storefront; Supabase provides the database, admin login and product-image storage.
 
 ## Included
 
-- Editorial luxury homepage
-- Responsive navigation + mobile menu
-- Search overlay
-- Product filtering and sorting
-- 12-item demo catalogue
-- Product quick-view modal
-- Shopping bag with quantity controls
-- Wishlist / saved pieces
-- Order-request handoff into the enquiry form
-- Lookbook section
-- Brand story / services / training sections
-- Testimonial slider
-- Concierge enquiry form
-- Newsletter capture UI
-- Scroll animations and reduced-motion support
-- SEO metadata + Schema.org Store markup
-- Fully responsive layouts for mobile, tablet and desktop
+- `index.html` — customer-facing premium storefront
+- `admin.html` — product and store-management dashboard
+- `styles.css` / `script.js` — storefront styling and interaction
+- `admin.css` / `admin.js` — admin interface and product management
+- `config.js` — Supabase connection settings
+- `data/products.json` — fallback/demo catalogue
+- `data/settings.json` — fallback store settings
+- `supabase-schema.sql` — complete database/RLS/storage setup
+- `assets/images/safyam-logo.jpeg` — official supplied logo
+- `assets/images/safyam-brand-poster.jpeg` — official supplied brand artwork
 
-## Files
+## Current behavior
 
-- `index.html` — site structure and SEO
-- `styles.css` — complete responsive visual system
-- `script.js` — catalogue, bag, wishlist, search, modal, sliders and forms
-- `assets/images/` — reserved for Safyam's original photography
+When `config.js` has no Supabase keys, the website runs in **demo/local mode**. Admin changes are stored only in that browser using Local Storage. This is useful for testing the management flow, but it is not a shared production backend.
+
+When Supabase is configured, the same Admin page becomes the live backend: changes made by an authenticated admin are saved to the database and immediately become available to visitors.
+
+## Connect the real backend
+
+1. Create a Supabase project.
+2. Open **SQL Editor** and run `supabase-schema.sql`.
+3. In Supabase Authentication, create the approved admin user(s) with email/password.
+4. Open `config.js` and paste the project URL and public anon key:
+
+```js
+window.SAFYAM_CONFIG = {
+  supabaseUrl: "https://YOUR-PROJECT.supabase.co",
+  supabaseAnonKey: "YOUR-ANON-PUBLIC-KEY",
+  productsTable: "products",
+  settingsTable: "store_settings",
+  storageBucket: "product-images",
+  currency: "NGN",
+  locale: "en-NG"
+};
+```
+
+The anon key is intended for browser use. Security is enforced by the Row Level Security policies in the SQL file. Do **not** place a Supabase service-role key in this website.
+
+## Admin capabilities
+
+Open `/admin.html` after deployment. The dashboard supports:
+
+- Add products
+- Edit product name/category/description
+- Change price and stock
+- Show/hide a product
+- Reorder featured products
+- Replace image by URL
+- Upload images directly to Supabase Storage in live mode
+- Delete products
+- Update hero text, announcement bar, WhatsApp, email and Instagram
+
+## Sample product photography
+
+The initial catalogue contains temporary online sample imagery to demonstrate the final product-card experience. Several samples are from Unsplash and include image-credit metadata. These are placeholders, not claims that the pictured products belong to Safyam. Replace them from Admin with Safyam's original product photography before commercial launch.
 
 ## GitHub Pages deployment
 
-1. Create a new public GitHub repository, e.g. `safyam-creative-emporium`.
-2. Upload `index.html`, `styles.css`, `script.js` and the `assets` folder to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select `main` and `/ (root)`, then save.
-6. GitHub will publish the site at your Pages URL.
+Upload all files to the repository root. In GitHub go to **Settings → Pages → Deploy from a branch**, select `main` and `/root`, then save.
 
-## Before commercial launch
+## Recommended launch hardening
 
-Replace the demo catalogue with Safyam's real product names, prices, stock details and original photography. Add the verified WhatsApp number, email address and delivery policy. Connect the order flow to WhatsApp or a backend. For actual online payments and inventory management, connect a production backend and Nigerian payment provider such as Paystack or Flutterwave.
-
-## Product image convention
-
-When original images are available, place them in `assets/images/` and update each product object in `script.js` with an `image` field. The current CSS-art placeholders are intentionally self-contained so the website can be previewed immediately.
+Before public launch: replace all sample photography, add the business WhatsApp/email, test the Supabase RLS policies with a non-admin browser, add custom domain/SSL, connect Paystack or Flutterwave for payment if required, add delivery pricing logic, and connect order notifications/analytics.

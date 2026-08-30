@@ -26,3 +26,19 @@
 @media (max-width:390px){.brand-wordmark{display:none}.site-header{grid-template-columns:44px 1fr 88px}.product-grid{grid-template-columns:1fr 1fr}.product-info p{display:none}.editorial-art{height:380px}.hero h1{font-size:50px}}
 @media (hover:none){.quick-view{transform:none;opacity:.94}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.announcement-track,.hero-beads{animation:none}.reveal{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
+
+/* ===== V3: OFFICIAL BRAND + LIVE PRODUCT IMAGERY ===== */
+.brand-logo{width:46px;height:46px;border-radius:50%;object-fit:cover;border:1px solid rgba(213,166,79,.55);box-shadow:0 0 0 3px rgba(213,166,79,.06)}
+.hero-logo-card{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);width:min(42vw,390px);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 28px 90px rgba(0,0,0,.55),0 0 0 1px rgba(219,171,84,.25)}
+.hero-logo-card img{width:100%;height:100%;object-fit:cover;display:block}
+.story-logo{border:none!important;background:transparent!important;overflow:hidden;padding:0!important}
+.story-logo img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.footer-logo{width:72px;height:72px;border-radius:50%;object-fit:cover;border:1px solid rgba(217,171,91,.45)}
+.product-art.has-image,.cart-thumb.has-image,.wishlist-thumb.has-image,.modal-art.has-image{padding:0;overflow:hidden;background:#111}
+.product-art.has-image img,.cart-thumb.has-image img,.wishlist-thumb.has-image img,.modal-art.has-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.product-media:hover .product-art.has-image img{transform:scale(1.035)}
+.product-credit{font-size:10px;color:#7d776d;margin-top:7px;line-height:1.35}
+.stock-pill{display:inline-flex;align-items:center;gap:6px;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#6a6258}
+.stock-pill::before{content:"";width:6px;height:6px;border-radius:50%;background:#67895f}.stock-pill.low::before{background:#b3812e}.stock-pill.out::before{background:#9f4f4f}
+.admin-link-pill{position:fixed;right:18px;bottom:18px;z-index:70;background:#0b0b0b;color:#d8ae62;border:1px solid rgba(216,174,98,.35);padding:10px 14px;border-radius:999px;font-size:11px;letter-spacing:.11em;text-transform:uppercase;box-shadow:0 15px 35px rgba(0,0,0,.2)}
+@media(max-width:760px){.brand-logo{width:38px;height:38px}.hero-logo-card{width:min(62vw,300px)}.footer-logo{width:56px;height:56px}.admin-link-pill{right:10px;bottom:10px;padding:9px 11px}}
