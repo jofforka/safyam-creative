@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="Safyam Creative Emporium — premium fashion, handcrafted beadwork, accessories, gifts and bespoke creative pieces with nationwide delivery." />
+  <meta property="og:title" content="Safyam Creative Emporium" />
+  <meta property="og:description" content="Wearable craft. Distinctive style. Discover premium fashion, beadwork, accessories and gifts." />
+  <meta property="og:type" content="website" />
+  <title>Safyam Creative Emporium — Fashion, Beadwork & Gifts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Store",
+    "name":"Safyam Creative Emporium",
+    "description":"Fashion, handcrafted beadwork, accessories and gifts.",
+    "areaServed":"NG",
+    "sameAs":["https://www.instagram.com/safyam_creative/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <div class="announcement" aria-label="Store announcement">
+    <div class="announcement-track">
+      <span>Nationwide delivery across Nigeria</span><i>◆</i>
+      <span>Bespoke pieces made for you</span><i>◆</i>
+      <span>Premium finishing, thoughtful details</span><i>◆</i>
+      <span>Nationwide delivery across Nigeria</span><i>◆</i>
+      <span>Bespoke pieces made for you</span><i>◆</i>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <button class="menu-trigger" id="menuTrigger" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <a class="brand" href="#home" aria-label="Safyam Creative Emporium home">
+      <span class="brand-seal" aria-hidden="true">S</span>
+      <span class="brand-wordmark"><b>SAFYAM</b><small>CREATIVE EMPORIUM</small></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#new">New In</a>
+      <a href="#shop">Shop</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#story">Our Story</a>
+      <a href="#training">Training</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="round-btn" id="searchTrigger" type="button" aria-label="Search products">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+      </button>
+      <button class="round-btn" id="wishlistTrigger" type="button" aria-label="View saved items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-8-4.8-8-11A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 8 3.5c0 6.2-8 11-8 11Z"></path></svg>
+        <span class="action-count" id="wishlistCount">0</span>
+      </button>
+      <button class="bag-trigger" id="cartTrigger" type="button" aria-label="Open shopping bag">
+        <span>Bag</span><b id="cartCount">0</b>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-head">
+      <span>Explore Safyam</span>
+      <button type="button" id="menuClose" aria-label="Close menu">×</button>
+    </div>
+    <nav>
+      <a href="#new"><span>01</span>New In</a>
+      <a href="#shop"><span>02</span>Shop All</a>
+      <a href="#lookbook"><span>03</span>Lookbook</a>
+      <a href="#story"><span>04</span>Our Story</a>
+      <a href="#training"><span>05</span>Training</a>
+      <a href="#contact"><span>06</span>Contact</a>
+    </nav>
+    <div class="mobile-menu-foot">
+      <p>Fashion • Beaded Pieces • Accessories • Gifts</p>
+      <a href="https://www.instagram.com/safyam_creative/" target="_blank" rel="noreferrer">Instagram ↗</a>
+    </div>
+  </aside>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-shell">
+      <div class="search-topline">
+        <span>Search the collection</span>
+        <button type="button" id="searchClose">Close</button>
+      </div>
+      <label class="search-field">
+        <span class="sr-only">Search products</span>
+        <input id="globalSearch" type="search" placeholder="What are you looking for?" autocomplete="off" />
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+      </label>
+      <div class="search-suggestions">
+        <span>Popular:</span>
+        <button type="button" data-search-term="beaded">Beaded</button>
+        <button type="button" data-search-term="bag">Bags</button>
+        <button type="button" data-search-term="gift">Gifts</button>
+        <button type="button" data-search-term="fashion">Fashion</button>
+      </div>
+      <p id="searchFeedback" aria-live="polite">Search by product, category or style.</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-noise"></div>
+        <div class="hero-arch arch-one"></div>
+        <div class="hero-arch arch-two"></div>
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-beads">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="hero-monogram">S</div>
+        <span class="hero-caption caption-one">HANDCRAFTED</span>
+        <span class="hero-caption caption-two">LAGOS • NIGERIA</span>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Safyam Creative Emporium</p>
+        <h1>Where craft<br /><em>becomes</em> presence.</h1>
+        <p class="hero-lead">Distinctive fashion, handcrafted beadwork, accessories and gifts designed for people who refuse to blend in.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#shop">Shop the collection <span>↗</span></a>
+          <a class="text-cta" href="#lookbook">Explore the lookbook <span>→</span></a>
+        </div>
+        <div class="hero-proof">
+          <div><strong>01</strong><span>Original<br />design</span></div>
+          <div><strong>02</strong><span>Premium<br />finishing</span></div>
+          <div><strong>03</strong><span>Nationwide<br />delivery</span></div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#new" aria-label="Scroll to new collection"><span>SCROLL</span><i></i></a>
+    </section>
+
+    <section class="editorial-intro" id="new">
+      <div class="section-kicker reveal">NEW / 2026</div>
+      <div class="editorial-title reveal">
+        <h2>Objects of style.<br />Made with intention.</h2>
+        <p>From hand-strung beadwork to statement accessories and elevated everyday pieces, Safyam turns detail into identity.</p>
+      </div>
+      <div class="editorial-cards">
+        <article class="editorial-card editorial-card-large reveal">
+          <div class="editorial-art editorial-art-1"><span>SC</span></div>
+          <div class="editorial-meta"><span>01 / Signature Beadwork</span><a href="#shop" data-shop-filter="beads">Discover →</a></div>
+        </article>
+        <article class="editorial-card reveal">
+          <div class="editorial-art editorial-art-2"><span>FORM</span></div>
+          <div class="editorial-meta"><span>02 / Fashion Edit</span><a href="#shop" data-shop-filter="fashion">Discover →</a></div>
+        </article>
+        <article class="editorial-card reveal">
+          <div class="editorial-art editorial-art-3"><span>GIFT</span></div>
+          <div class="editorial-meta"><span>03 / Curated Gifting</span><a href="#shop" data-shop-filter="gifts">Discover →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="shop" id="shop">
+      <div class="shop-head reveal">
+        <div>
+          <p class="eyebrow dark">The Shop</p>
+          <h2>Find your statement.</h2>
+        </div>
+        <p class="shop-note">A premium demo catalogue ready to be replaced with Safyam’s original product photography and exact inventory.</p>
+      </div>
+
+      <div class="shop-controls reveal">
+        <div class="category-tabs" id="categoryTabs" role="group" aria-label="Filter products by category">
+          <button class="active" type="button" data-category="all">All</button>
+          <button type="button" data-category="beads">Beadwork</button>
+          <button type="button" data-category="fashion">Fashion</button>
+          <button type="button" data-category="accessories">Accessories</button>
+          <button type="button" data-category="gifts">Gifts</button>
+        </div>
+        <label class="sort-wrap">Sort
+          <select id="sortSelect">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="name">Name: A–Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>No pieces match your selection.</p>
+
+      <div class="shop-footer reveal">
+        <p>Need something uniquely yours?</p>
+        <a href="#contact">Request a bespoke piece <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="manifesto" id="lookbook">
+      <div class="manifesto-sticky reveal">
+        <p class="eyebrow">The Safyam Point of View</p>
+        <h2>Not decoration.<br /><em>Expression.</em></h2>
+        <p>We believe the most memorable style is personal. Every detail should say something before you do.</p>
+        <a class="btn btn-outline" href="#contact">Create something bespoke</a>
+      </div>
+      <div class="lookbook-grid">
+        <figure class="lookbook-tile tall reveal"><div class="lookbook-art art-a"><span>01</span><b>TEXTURE</b></div><figcaption>Hand-finished detail</figcaption></figure>
+        <figure class="lookbook-tile reveal"><div class="lookbook-art art-b"><span>02</span><b>FORM</b></div><figcaption>Quiet confidence</figcaption></figure>
+        <figure class="lookbook-tile reveal"><div class="lookbook-art art-c"><span>03</span><b>GLOW</b></div><figcaption>Occasion energy</figcaption></figure>
+        <figure class="lookbook-tile wide reveal"><div class="lookbook-art art-d"><span>04</span><b>CRAFT</b></div><figcaption>Original by design</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="story-number reveal">S / 01</div>
+      <div class="story-copy reveal">
+        <p class="eyebrow dark">Our Story</p>
+        <h2>Creativity is the luxury.</h2>
+        <p class="story-lead">Safyam Creative Emporium is a fashion and creative brand built around originality, craft and presentation.</p>
+        <div class="story-columns">
+          <p>We create and curate fashion pieces, beadwork, accessories and gifts that feel considered rather than mass-produced. The goal is simple: make every piece worthy of being noticed, worn, gifted and remembered.</p>
+          <p>From ready-to-shop collections to bespoke requests, Safyam combines modern style with the unmistakable character of hand-led creativity.</p>
+        </div>
+      </div>
+      <div class="story-seal reveal"><span>S</span><small>CREATIVE<br />EMPORIUM</small></div>
+    </section>
+
+    <section class="services">
+      <article class="service reveal"><span>01</span><h3>Bespoke Orders</h3><p>Custom colours, details and statement pieces developed around your idea.</p><a href="#contact">Start a request →</a></article>
+      <article class="service reveal"><span>02</span><h3>Gift Curation</h3><p>Thoughtful pieces for birthdays, milestones, celebrations and corporate gifting.</p><a href="#contact">Plan a gift →</a></article>
+      <article class="service reveal"><span>03</span><h3>Bulk & Wholesale</h3><p>Structured enquiries for retailers, events, groups and selected collaborations.</p><a href="#contact">Discuss partnership →</a></article>
+    </section>
+
+    <section class="training" id="training">
+      <div class="training-visual reveal"><div class="training-rings"><i></i><i></i><i></i></div><span>LEARN<br />CREATE<br />BUILD</span></div>
+      <div class="training-copy reveal">
+        <p class="eyebrow">Safyam Creative Studio</p>
+        <h2>Learn the craft.<br />Own the skill.</h2>
+        <p>Safyam’s training arm can feature bead-making, accessory design and creative entrepreneurship programmes with class dates, registration, student work and testimonials.</p>
+        <div class="training-tags"><span>Beadwork</span><span>Accessory Design</span><span>Creative Business</span></div>
+        <a class="btn btn-gold" href="#contact">Enquire about training <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="testimonial-heading reveal">
+        <p class="eyebrow dark">Client Notes</p>
+        <h2>Loved. Worn. Remembered.</h2>
+      </div>
+      <div class="testimonial-stage reveal" id="testimonialStage">
+        <blockquote class="testimonial active"><p>“The finishing feels premium and the piece looks even better in person. It became the centre of my entire look.”</p><footer>— Sample client note / replace with verified review</footer></blockquote>
+        <blockquote class="testimonial"><p>“Safyam understood the colour direction immediately and delivered something that felt completely personal.”</p><footer>— Sample bespoke-order review</footer></blockquote>
+        <blockquote class="testimonial"><p>“The gift presentation was beautiful. It felt thoughtful before the box was even opened.”</p><footer>— Sample gifting review</footer></blockquote>
+      </div>
+      <div class="testimonial-controls reveal">
+        <button type="button" id="testimonialPrev" aria-label="Previous testimonial">←</button>
+        <span id="testimonialIndex">01 / 03</span>
+        <button type="button" id="testimonialNext" aria-label="Next testimonial">→</button>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-copy reveal">
+        <p class="eyebrow">Contact / Concierge</p>
+        <h2>Tell us what<br />you have in mind.</h2>
+        <p>For custom orders, product enquiries, training, gifting, wholesale or collaborations.</p>
+        <div class="contact-links">
+          <a href="https://www.instagram.com/safyam_creative/" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
+          <span>Nationwide delivery in Nigeria</span>
+        </div>
+      </div>
+
+      <form class="concierge-form reveal" id="contactForm">
+        <div class="form-row">
+          <label><span>Name *</span><input name="name" required placeholder="Your full name" /></label>
+          <label><span>Phone / WhatsApp *</span><input name="phone" required inputmode="tel" placeholder="Your contact number" /></label>
+        </div>
+        <div class="form-row">
+          <label><span>Email</span><input name="email" type="email" placeholder="you@example.com" /></label>
+          <label><span>I’m interested in</span><select name="interest"><option>Custom order</option><option>Beaded pieces</option><option>Fashion</option><option>Accessories</option><option>Gifts</option><option>Training</option><option>Wholesale / partnership</option></select></label>
+        </div>
+        <label><span>Tell us more *</span><textarea name="message" required rows="5" placeholder="Describe the item, colours, quantity, occasion, preferred date or any other detail..."></textarea></label>
+        <button class="form-submit" type="submit"><span>Prepare enquiry</span><b>↗</b></button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+        <div class="enquiry-output" id="enquiryOutput" hidden></div>
+      </form>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-copy reveal"><span>THE SAFYAM LIST</span><h2>New drops.<br />Private previews.</h2></div>
+      <form class="newsletter-form reveal" id="newsletterForm"><label class="sr-only" for="newsletterEmail">Email address</label><input id="newsletterEmail" type="email" required placeholder="Enter your email address" /><button type="submit">Join the list <span>→</span></button><p id="newsletterStatus" aria-live="polite"></p></form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><span class="footer-s">S</span><div><b>SAFYAM</b><small>CREATIVE EMPORIUM</small></div></div>
+    <div class="footer-grid">
+      <div><span>SHOP</span><a href="#shop" data-shop-filter="beads">Beadwork</a><a href="#shop" data-shop-filter="fashion">Fashion</a><a href="#shop" data-shop-filter="accessories">Accessories</a><a href="#shop" data-shop-filter="gifts">Gifts</a></div>
+      <div><span>EXPLORE</span><a href="#story">Our Story</a><a href="#lookbook">Lookbook</a><a href="#training">Training</a><a href="#contact">Contact</a></div>
+      <div><span>FOLLOW</span><a href="https://www.instagram.com/safyam_creative/" target="_blank" rel="noreferrer">Instagram ↗</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <b id="year"></b> Safyam Creative Emporium</span><span>Fashion • Beadwork • Accessories • Gifts</span><a href="#home">Back to top ↑</a></div>
+  </footer>
+
+  <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Shopping bag">
+    <div class="drawer-head"><div><span>YOUR BAG</span><small id="cartSummary">0 items</small></div><button type="button" id="cartClose" aria-label="Close bag">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>○</span><h3>Your bag is empty.</h3><p>Choose something worth remembering.</p><button type="button" id="emptyShopBtn">Explore the collection</button></div>
+    <div class="drawer-foot">
+      <div class="subtotal"><span>Subtotal</span><b id="cartTotal">₦0</b></div>
+      <p>Shipping is confirmed after your order request.</p>
+      <button class="checkout-btn" id="checkoutBtn" type="button">Prepare order request <span>↗</span></button>
+    </div>
+  </aside>
+
+  <aside class="wishlist-drawer" id="wishlistDrawer" aria-hidden="true" aria-label="Saved items">
+    <div class="drawer-head"><div><span>SAVED PIECES</span><small id="wishlistSummary">0 items</small></div><button type="button" id="wishlistClose" aria-label="Close saved items">×</button></div>
+    <div class="wishlist-items" id="wishlistItems"></div>
+    <div class="wishlist-empty" id="wishlistEmpty"><span>♡</span><h3>Nothing saved yet.</h3><p>Tap the heart on any piece to keep it here.</p></div>
+  </aside>
+
+  <div class="product-modal" id="productModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Close product">×</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
