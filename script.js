@@ -94,3 +94,21 @@ function setTestimonial(i){const all=$$('.testimonial');testimonialIndex=(i+all.
 $('#contactForm').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.currentTarget);const msg=`SAFYAM ENQUIRY\n\nName: ${d.get('name')}\nPhone / WhatsApp: ${d.get('phone')}\nEmail: ${d.get('email')||'Not provided'}\nInterest: ${d.get('interest')}\n\nMessage:\n${d.get('message')}`;if(settings.whatsapp){const num=settings.whatsapp.replace(/\D/g,'');window.open(`https://wa.me/${num}?text=${encodeURIComponent(msg)}`,'_blank');$('#formStatus').textContent='Opening WhatsApp…'}else{$('#enquiryOutput').textContent=`${msg}\n\nAdd Safyam’s WhatsApp number in Admin → Store Settings to send this directly.`;$('#enquiryOutput').hidden=false;$('#formStatus').textContent='Enquiry prepared below.'}});$('#newsletterForm').addEventListener('submit',e=>{e.preventDefault();$('#newsletterStatus').textContent='Email capture is ready for your preferred marketing platform.'});
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.08});$$('.reveal').forEach(el=>observer.observe(el));window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;$('#scrollProgress').style.width=`${max>0?(scrollY/max)*100:0}%`;$('#siteHeader').classList.toggle('scrolled',scrollY>80)},{passive:true});document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDrawers();closeProduct();closeMenu();closeSearch()}});$('#year').textContent=new Date().getFullYear();
 initData();
+
+
+// V4 mobile app navigation bridge
+(() => {
+  const byId = (id) => document.getElementById(id);
+  const bridge = (mobileId, desktopId) => {
+    const m = byId(mobileId), d = byId(desktopId);
+    if (m && d) m.addEventListener('click', () => d.click());
+  };
+  bridge('mobileSearchBtn','searchTrigger');
+  bridge('mobileWishBtn','wishlistTrigger');
+  bridge('mobileBagBtn','cartTrigger');
+  const syncBag = () => { const src=byId('cartCount'), dst=byId('mobileBagCount'); if(src&&dst) dst.textContent=src.textContent; };
+  syncBag();
+  const src=byId('cartCount'); if(src) new MutationObserver(syncBag).observe(src,{childList:true,subtree:true,characterData:true});
+  const links=[...document.querySelectorAll('[data-app-nav]')];
+  links.forEach(link=>link.addEventListener('click',()=>{links.forEach(x=>x.classList.remove('active'));link.classList.add('active')}));
+})();
